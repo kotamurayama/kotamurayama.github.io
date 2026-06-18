@@ -30,11 +30,13 @@ Then visit `http://localhost:8000/`.
 
 ## Publishing With GitHub Pages
 
-Expected URL for the `kotamurayama-hub/webpage` repository:
+Expected URL for the `kotamurayama/webpage` repository:
 
 ```text
-https://kotamurayama-hub.github.io/webpage/
+https://kotamurayama.github.io/webpage/
 ```
+
+For the shorter root URL `https://kotamurayama.github.io/`, rename the repository itself to `kotamurayama.github.io`.
 
 1. Create a GitHub repository.
 2. Copy the files in this directory to the repository root.
