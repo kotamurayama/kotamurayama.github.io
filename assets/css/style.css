@@ -79,8 +79,9 @@ h3 {
 h1 {
   margin-bottom: var(--space-md);
   font-family: var(--font-serif);
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-size: 5.25rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 h2 {
@@ -170,14 +171,20 @@ p {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
-  gap: clamp(2rem, 5vw, 4rem);
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
   align-items: start;
   padding-block: clamp(3.5rem, 7vw, 5.75rem) clamp(2.5rem, 5vw, 4rem);
 }
 
 .hero-copy {
-  max-width: 680px;
+  max-width: 720px;
+}
+
+.hero-profile {
+  display: grid;
+  gap: var(--space-md);
+  max-width: 620px;
 }
 
 .eyebrow,
@@ -192,6 +199,7 @@ p {
 
 .role {
   max-width: var(--measure);
+  margin-bottom: 0;
   color: var(--color-muted);
   font-size: 1.1rem;
 }
@@ -210,6 +218,14 @@ p {
   flex-wrap: wrap;
   gap: var(--space-sm);
   margin-top: var(--space-md);
+}
+
+.hero-profile .action-row {
+  margin-top: 0;
+}
+
+.hero-profile .intro {
+  margin-bottom: 0;
 }
 
 .button {
@@ -246,11 +262,10 @@ p {
 }
 
 .hero-brief {
-  display: grid;
-  gap: var(--space-lg);
-  align-content: start;
-  border-left: 1px solid var(--color-line);
-  padding-left: clamp(1rem, 3vw, 2rem);
+  max-width: 620px;
+  margin-top: var(--space-lg);
+  border-top: 1px solid var(--color-line);
+  padding-top: var(--space-lg);
 }
 
 .research-mark {
@@ -300,19 +315,9 @@ p {
   text-transform: uppercase;
 }
 
-.hero-research {
-  max-width: 620px;
-  margin-top: var(--space-lg);
-  border-top: 1px solid var(--color-line);
-  padding-top: var(--space-md);
-}
-
-.hero-research .intro {
-  margin-bottom: var(--space-sm);
-}
-
 .hero-fields {
-  margin: 0;
+  max-width: 620px;
+  margin: var(--space-md) 0 0;
 }
 
 .hero-fields div {
@@ -461,15 +466,12 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    min-height: auto;
+  h1 {
+    font-size: 4.25rem;
   }
 
   .hero-brief {
-    border-left: 0;
-    border-top: 1px solid var(--color-line);
-    padding-top: var(--space-lg);
-    padding-left: 0;
+    max-width: 620px;
   }
 
   .hero-contact p,
@@ -519,6 +521,10 @@ p {
     flex-direction: column;
   }
 
+  h1 {
+    font-size: 3rem;
+  }
+
   .button,
   .action-row .text-link {
     width: 100%;
@@ -531,6 +537,12 @@ p {
   .footer-inner {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 2.45rem;
   }
 }
 
