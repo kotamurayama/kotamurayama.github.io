@@ -15,7 +15,7 @@
   --space-xl: 2.5rem;
   --space-2xl: 4rem;
   --container: 980px;
-  --measure: 58ch;
+  --measure: 60ch;
   --radius: 6px;
 }
 
@@ -35,7 +35,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-sans);
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.72;
   text-rendering: optimizeLegibility;
 }
 
@@ -72,7 +72,7 @@ h1,
 h2,
 h3 {
   color: var(--color-text);
-  line-height: 1.18;
+  line-height: 1.22;
   letter-spacing: 0;
 }
 
@@ -92,13 +92,14 @@ h2 {
 }
 
 h3 {
-  margin-bottom: var(--space-xs);
+  margin-bottom: 0.6rem;
   font-size: 1.08rem;
   font-weight: 650;
+  line-height: 1.34;
 }
 
 p {
-  margin-bottom: var(--space-md);
+  margin-bottom: 1.1rem;
 }
 
 .container {
@@ -176,7 +177,7 @@ p {
 
 .hero-profile {
   display: grid;
-  gap: var(--space-md);
+  gap: 0.95rem;
   max-width: 900px;
 }
 
@@ -195,6 +196,7 @@ p {
   margin-bottom: 0;
   color: var(--color-muted);
   font-size: 1.1rem;
+  line-height: 1.68;
 }
 
 .intro,
@@ -210,7 +212,7 @@ p {
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-sm);
-  margin-top: var(--space-md);
+  margin-top: 0.2rem;
 }
 
 .hero-profile .action-row {
@@ -218,11 +220,12 @@ p {
 }
 
 .hero-profile .intro {
-  max-width: none;
+  max-width: 74ch;
   margin-bottom: 0;
-  font-size: 1.08rem;
-  line-height: 1.65;
-  white-space: nowrap;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.78;
+  white-space: normal;
 }
 
 .button {
@@ -243,15 +246,6 @@ p {
 .button:hover {
   background: #0a4e4a;
   text-decoration: none;
-}
-
-.button-secondary {
-  background: transparent;
-  color: var(--color-accent);
-}
-
-.button-secondary:hover {
-  background: var(--color-accent-soft);
 }
 
 .text-link {
@@ -290,16 +284,17 @@ p {
   align-items: center;
   gap: clamp(1.5rem, 4vw, 3rem);
   max-width: 900px;
-  margin-top: var(--space-lg);
+  margin-top: clamp(1.75rem, 4vw, 2.75rem);
   border-top: 1px solid var(--color-line);
-  padding-top: var(--space-md);
+  padding-top: var(--space-lg);
 }
 
 .hero-contact {
   display: grid;
-  gap: var(--space-sm);
+  gap: 0.9rem;
   color: var(--color-muted);
   font-style: normal;
+  line-height: 1.64;
 }
 
 .hero-contact p {
@@ -317,7 +312,7 @@ p {
 }
 
 .section {
-  padding-block: clamp(2.5rem, 5vw, 4rem);
+  padding-block: clamp(3rem, 5.5vw, 4.75rem);
 }
 
 .band {
@@ -330,7 +325,7 @@ p {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--space-md);
   align-items: end;
-  margin-bottom: var(--space-lg);
+  margin-bottom: clamp(1.35rem, 3vw, 2.1rem);
 }
 
 .section-heading .section-label,
@@ -348,15 +343,16 @@ p {
 .course-list {
   display: grid;
   border-top: 1px solid var(--color-line);
+  line-height: 1.7;
 }
 
 .compact-item,
 .paper-item,
 .course-item {
   display: grid;
-  gap: var(--space-md);
+  gap: clamp(1rem, 2vw, 1.45rem);
   border-bottom: 1px solid var(--color-line);
-  padding-block: var(--space-lg);
+  padding-block: clamp(1.65rem, 3vw, 2.3rem);
 }
 
 .compact-item,
@@ -384,7 +380,7 @@ p {
 }
 
 .page-head {
-  padding-block: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 3vw, 2.5rem);
+  padding-block: clamp(3.25rem, 7vw, 5.25rem) clamp(1.75rem, 3.5vw, 3rem);
 }
 
 .page-head h1 {
@@ -397,7 +393,7 @@ p {
 }
 
 .paper-summary {
-  margin-top: var(--space-sm);
+  margin-top: 0.7rem;
 }
 
 .paper-links {
