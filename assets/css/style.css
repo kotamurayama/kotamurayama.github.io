@@ -275,28 +275,6 @@ p {
   stroke-width: 2;
 }
 
-.quick-facts {
-  display: grid;
-  gap: var(--space-md);
-  margin: 0;
-}
-
-.quick-facts div {
-  border-top: 1px solid var(--color-line);
-  padding-top: var(--space-md);
-}
-
-.quick-facts dt {
-  color: var(--color-muted);
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.quick-facts dd {
-  margin: 0.15rem 0 0;
-}
-
 .hero-contact {
   display: grid;
   gap: var(--space-sm);
@@ -320,6 +298,38 @@ p {
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.hero-research {
+  max-width: 620px;
+  margin-top: var(--space-lg);
+  border-top: 1px solid var(--color-line);
+  padding-top: var(--space-md);
+}
+
+.hero-research .intro {
+  margin-bottom: var(--space-sm);
+}
+
+.hero-fields {
+  margin: 0;
+}
+
+.hero-fields div {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: var(--space-sm);
+}
+
+.hero-fields dt {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-fields dd {
+  margin: 0;
 }
 
 .section {
@@ -462,7 +472,8 @@ p {
     padding-left: 0;
   }
 
-  .hero-contact p {
+  .hero-contact p,
+  .hero-fields div {
     grid-template-columns: 1fr;
     gap: 0.15rem;
   }
