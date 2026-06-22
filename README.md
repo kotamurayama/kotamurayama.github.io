@@ -1,6 +1,8 @@
 # Kota Murayama Academic Website
 
-This is a simple static academic website for Kota Murayama. It is built with plain HTML, CSS, and minimal JavaScript so that it can be edited without a build system.
+This repository contains a simple static academic website for Kota Murayama. It is designed for GitHub Pages and uses plain HTML, CSS, and minimal JavaScript. There is no build step and no framework dependency.
+
+Content should not be invented; use TODO comments for unverified information.
 
 ## File Structure
 
@@ -9,7 +11,9 @@ This is a simple static academic website for Kota Murayama. It is built with pla
   index.html
   research.html
   teaching.html
+  404.html
   favicon.svg
+  .nojekyll
   assets/
     css/
       style.css
@@ -20,38 +24,52 @@ This is a simple static academic website for Kota Murayama. It is built with pla
 
 ## Local Preview
 
-Open `index.html` directly in a browser, or run a local server from this directory:
+From the repository root, run:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000/`.
+Then visit:
+
+```text
+http://localhost:8000/
+```
+
+You can also open `index.html` directly in a browser, but a local server is closer to the GitHub Pages environment.
 
 ## Publishing With GitHub Pages
 
-Expected URL for the `kotamurayama/kotamurayama.github.io` repository:
+Expected public URL:
 
 ```text
 https://kotamurayama.github.io/
 ```
 
-1. Create a GitHub repository.
-2. Copy the files in this directory to the repository root.
-3. Commit and push the files.
-4. In GitHub, open Settings -> Pages.
-5. Choose the `main` branch and the repository root as the Pages source.
-6. Save the setting and wait for GitHub to publish the site.
+If the site does not appear or returns a 404, check the repository settings:
+
+1. Open GitHub repository settings.
+2. Go to Settings -> Pages.
+3. Source: Deploy from a branch.
+4. Branch: `main`.
+5. Folder: `/root`.
+6. Save and wait a few minutes for GitHub Pages to publish.
+
+Make sure `index.html` is in the repository root and that `.nojekyll` is present.
 
 ## Updating Content
 
-- Papers: edit the paper entries in `research.html`. Working papers are under the `Working Papers` section; published papers are under `Publications`.
-- Selected research on the home page: edit the `Selected research` section in `index.html`.
-- CV link: update the Google Drive URL in the header navigation on all three HTML files and in the hero button on `index.html`.
-- Teaching: edit the course entries in `teaching.html`. The page is separated into undergraduate and graduate sections.
-- Contact: edit the `Contact` section in `index.html` and the navigation/footer text if needed.
-- Design tokens: adjust colors, fonts, spacing, and layout variables at the top of `assets/css/style.css`.
+- CV link: update the Google Drive URL in the header navigation on `index.html`, `research.html`, and `teaching.html`, and in the hero link on `index.html`.
+- Research entries: edit `research.html`. Working papers are under `Working Papers`; published papers are under `Publications`.
+- Selected research: edit the `Selected Research` section in `index.html`.
+- Teaching entries: edit `teaching.html`. The page is separated into `Undergraduate` and `Graduate`.
+- Contact information: edit the `Contact` section in `index.html` and the navigation contact links if the section ID changes.
+- Colors, typography, and spacing: edit the CSS variables at the top of `assets/css/style.css`.
+
+## Last Updated Policy
+
+The footer contains a visible `Last updated` date. Update this date when content or design changes are published. The JavaScript in `assets/js/main.js` only updates the copyright year.
 
 ## Verified Source Information
 
-The current CV, contact details, paper titles, paper details, and research links were copied from the existing Weebly site on June 18, 2026.
+The current CV link, contact details, paper titles, paper details, and research links were copied from the existing website and subsequent local edits. Do not add unverified positions, affiliations, coauthors, abstracts, or profile links without confirming them first.
